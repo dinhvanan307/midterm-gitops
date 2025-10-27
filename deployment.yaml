@@ -15,6 +15,6 @@ spec:
       containers:
         - name: app
           # Đây là image "mặc định" ban đầu, chúng ta sẽ tự động cập nhật nó
-          image: ghcr.io/dinhvanan307/midterm_cicd:3287de7
+          image: ghcr.io/dinhvanan307/midterm_cicd:6c54ce1
           ports:
             - containerPort: 80
