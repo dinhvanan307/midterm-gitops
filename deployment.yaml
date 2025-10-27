@@ -1,20 +1,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: midterm
+  name: my-simple-app
 spec:
   replicas: 2
   selector:
     matchLabels:
-      app: midterm
+      app: my-simple-app
   template:
     metadata:
       labels:
-        app: midterm
+        app: my-simple-app
     spec:
       containers:
-      - name: midterm
-        # THAY TÊN DOCKERHUB CỦA BẠN VÀO ĐÂY (để làm mồi ban đầu)
-        image: andinh307/midterm:latest 
-        ports:
-        - containerPort: 8080
+        - name: app
+          # Đây là image "mặc định" ban đầu, chúng ta sẽ tự động cập nhật nó
+          image: ghcr.io/dinhvanan307/midterm-gitops:dea79c5
+          ports:
+            - containerPort: 80
