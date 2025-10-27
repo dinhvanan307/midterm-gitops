@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: midterm
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: midterm
+  template:
+    metadata:
+      labels:
+        app: midterm
+    spec:
+      containers:
+      - name: midterm
+        # THAY TÊN DOCKERHUB CỦA BẠN VÀO ĐÂY (để làm mồi ban đầu)
+        image: andinh307/midterm:latest 
+        ports:
+        - containerPort: 8080
